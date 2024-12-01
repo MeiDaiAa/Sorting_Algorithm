@@ -26,7 +26,7 @@ void Bubble_sort::sort(){
         }
     }
 }
-
+//优化：提前退出
 void Bubble_sort::operator()(vector<int>&var){
     for(int i = var.size() - 1; i > 0; --i){
         //设置flag记录当前轮次是否发生了位置变换，如果没有发生位置变换，表示当前位置之后的元素都已排好序

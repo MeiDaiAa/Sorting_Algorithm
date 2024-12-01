@@ -7,19 +7,21 @@ using namespace std;
 // class Selection_sort{
 // public:
 //     void operator()(vector<int>& arr){
-//         for(int i = 0; i < arr.size(); ++i){
-//             int minPos = i;
+//         for(int i = 0; i < arr.size() - 1; ++i){
+//             int minIdx = i;
 //             for(int j = i + 1; j < arr.size(); ++j){
-//                 if(arr[j] < arr[minPos]){
-//                     minPos = j;
+//                 if(arr[j] < arr[minIdx]){
+//                     minIdx = j;
 //                 }
 //             }
-//             swap(arr[minPos], arr[i]);
+//             swap(arr[minIdx], arr[i]);
 //         }
 //     }
 // };
+////时间复杂度: O(n^2)
+////空间复杂度: O(1)
 
-//优化：双元选择排序
+//优化：双元选择排序, 同时记录最大值和最小值
 class Selection_sort{
 public:
     void operator()(vector<int>& arr){
